@@ -1,0 +1,11 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 300px;
+}
+
+.homePage {
+  font-size: 20px;
+  font-weight: 600;
+}
