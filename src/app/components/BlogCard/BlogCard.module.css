@@ -1,0 +1,13 @@
+.cardContainer {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fontSizeSmall {
+  font-size: 14px;
+}
