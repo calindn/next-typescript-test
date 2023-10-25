@@ -1,0 +1,24 @@
+.base {
+  font-size: 12px;
+  padding: 4px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.base:hover {
+  opacity: 0.8;
+}
+
+.primary {
+  color: black;
+  border: 1px solid green;
+  border-radius: 4px;
+  background-color: rgba(0, 128, 0, 0.4)
+}
+
+.secondary {
+  color: green;
+  border: 1px solid green;
+  border-radius: 4px;
+}

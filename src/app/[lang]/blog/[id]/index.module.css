@@ -1,0 +1,20 @@
+.container {
+  margin: 40px 80px;
+}
+
+.description {
+  font-size: 18px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.link {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.link:hover {
+  text-decoration: none;
+}

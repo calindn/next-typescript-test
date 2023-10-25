@@ -1,0 +1,13 @@
+{
+  "navigationBar": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "blogCard": {
+    "title": "Title",
+    "seeDetailsButtonText": "See details"
+  },
+  "articleDetailsPage": {
+    "goBackAction": "Go back"
+  }
+}

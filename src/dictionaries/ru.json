@@ -1,0 +1,13 @@
+{
+  "navigationBar": {
+    "home": "Дома",
+    "blog": "Блог"
+  },
+  "blogCard": {
+    "title": "Заголовок",
+    "seeDetailsButtonText": "Смотрите подробности"
+  },
+  "articleDetailsPage": {
+    "goBackAction": "Назад"
+  }
+}

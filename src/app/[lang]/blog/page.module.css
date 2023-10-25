@@ -1,0 +1,9 @@
+.pageWrapper {
+  margin-top: 40px;
+}
+
+.blogList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
