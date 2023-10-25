@@ -4,22 +4,22 @@ import { match } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
 
 
-let locales = ['en', 'ro', 'ru']
-let defaultLocale = 'ro';
+const LOCALES = ['en', 'ro', 'ru']
+const DEFAULT_LOCALE = 'ro';
  
 // Get the preferred locale, similar to the above or using a library
 function getLocale(request: NextRequest) {
   const headers = { 'accept-language': request.headers.get('accept-language') };
   const languages = new Negotiator({ headers }).languages();
  
-  const locale = match(languages, locales, defaultLocale);
+  const locale = match(languages, LOCALES, DEFAULT_LOCALE);
   return locale;
 }
  
 export function middleware(request: NextRequest) {
   // Check if there is any supported locale in the pathname
   const { pathname } = request.nextUrl
-  const pathnameHasLocale = locales.some(
+  const pathnameHasLocale = LOCALES.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   )
  
