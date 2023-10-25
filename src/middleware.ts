@@ -24,7 +24,7 @@ export function middleware(request: NextRequest) {
   )
  
   if (pathnameHasLocale) return
- 
+
   // Redirect if there is no locale
   const locale = getLocale(request);
   request.nextUrl.pathname = `/${locale}${pathname}`

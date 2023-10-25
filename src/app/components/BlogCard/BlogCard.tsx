@@ -2,16 +2,18 @@
 'use client'
 
 import Image from 'next/image';
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 
 import Stack from '../Stack/Stack';
 import Button from '../Button/Button';
 import styles from './BlogCard.module.css';
-import { Blog } from '../../types/index';
+import { Blog, Dictionary } from '../../types/index';
 
-export default function BlogCard(props: { blog: Blog  }) {
+export default function BlogCard(props: { blog: Blog, dict: Dictionary  }) {
   const router = useRouter();
-  const { blog } = props;
+  const currentPathname = usePathname();
+
+  const { blog, dict } = props;
   const {
     id,
     title,
@@ -21,7 +23,7 @@ export default function BlogCard(props: { blog: Blog  }) {
   return (
     <Stack className={styles.cardContainer} size="lg">
       <Stack>
-        <h5>Title</h5>
+        <h5>{dict.blogCard.title}</h5>
         <p className={styles.fontSizeSmall}>{title}</p>
       </Stack>
       <Image
@@ -32,9 +34,9 @@ export default function BlogCard(props: { blog: Blog  }) {
       />
       <Button
         variant="primary"
-        onClick={() => router.push(`/blog/${id}`)}
+        onClick={() => router.push(`${currentPathname}/${id}`)}
       >
-        See details
+        {dict.blogCard.seeDetailsButtonText}
       </Button>
     </Stack>
   );

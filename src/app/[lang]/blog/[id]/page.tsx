@@ -2,11 +2,12 @@ import Link from 'next/link';
 
 import { Blog } from '../../../types/index';
 import { getBlogPostById, getBlogPosts } from '@/api/api';
+import { getDictionary } from '@/dictionaries/dictionaries';
 
 import styles from './index.module.css';
 
-export default async function ArticleDetails(props: { params: { id: number } }) {
-  const { params: { id  } } = props;
+export default async function ArticleDetails(props: { params: { id: number, lang: string } }) {
+  const { params: { id, lang  } } = props;
   const rawBlog = await getBlogPostById(id);
   const { blog } = rawBlog;
   const {
@@ -14,9 +15,10 @@ export default async function ArticleDetails(props: { params: { id: number } }) 
     description,
     content_html: contentHtml
   } = blog;
+  const dict = await getDictionary(lang);
   return (
     <div className={styles.container}>
-      <Link className={styles.link} href="/blog">&lt;-- Go Back</Link>
+      <Link className={styles.link} href="/blog">&lt;-- {dict.articleDetailsPage.goBackAction}</Link>
 
       <h1 className={styles.mt20}>{title}</h1>
       <p className={styles.description}>{description}</p>

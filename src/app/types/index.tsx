@@ -10,3 +10,17 @@ export type Blog = {
   category: string;
   updated_at: string;
 };
+
+export type Dictionary = {
+  navigationBar: {
+    home: string,
+    blog: string
+  },
+  blogCard: {
+    title: string,
+    seeDetailsButtonText: string
+  },
+  articleDetailsPage: {
+    goBackAction: string
+  }
+};
