@@ -1,7 +1,7 @@
-import BlogCard from '../components/BlogCard/BlogCard';
+import BlogCard from '../../components/BlogCard/BlogCard';
 import styles from './page.module.css'
 
-import { Blog } from '../types/index';
+import { Blog } from '../../types/index';
 import { getBlogPosts } from '@/api/api';
 
 export default async function Blog() {

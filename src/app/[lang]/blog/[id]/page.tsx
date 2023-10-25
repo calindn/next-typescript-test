@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { Blog } from '../../types/index';
+import { Blog } from '../../../types/index';
 import { getBlogPostById, getBlogPosts } from '@/api/api';
 
 import styles from './index.module.css';
