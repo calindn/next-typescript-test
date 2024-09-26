@@ -1,0 +1,13 @@
+{
+  "navigationBar": {
+    "home": "Acasa",
+    "blog": "Blog"
+  },
+  "blogCard": {
+    "title": "Titlu",
+    "seeDetailsButtonText": "Vezi detalii"
+  },
+  "articleDetailsPage": {
+    "goBackAction": "Inapoi"
+  }
+}
